@@ -2,6 +2,11 @@
 def pick_word():
     return random.choice([i.lower() for i in open('/home/hp/Desktop/Exercises from www.practivepython org/exercise_30_related file.txt', 'r').read().split()])
 '''
+
+'''
+def pick_word():
+    return random.choice([i.lower() for i in open('/home/hp/Desktop/Exercises from www.practivepython org/exercise_30_related file.txt', 'r').read().split()])
+'''
 def Hangman_game():
     import random
     print('\nWelcome to Hangman Game!\n')
@@ -30,4 +35,4 @@ def Hangman_game():
 print(Hangman_game())
 nn = input('\nAre you want to play this game once more? \n[y/n] ')
 while nn.lower() == 'y': print(Hangman_game())
-if nn.lower() == 'n': print('Take care.. by by')
+if nn.lower() == 'n': print('Take care.. bye bye')
