@@ -2,11 +2,6 @@
 def pick_word():
     return random.choice([i.lower() for i in open('/home/hp/Desktop/Exercises from www.practivepython org/exercise_30_related file.txt', 'r').read().split()])
 '''
-
-'''
-def pick_word():
-    return random.choice([i.lower() for i in open('/home/hp/Desktop/Exercises from www.practivepython org/exercise_30_related file.txt', 'r').read().split()])
-'''
 def Hangman_game():
     import random
     print('\nWelcome to Hangman Game!\n')
