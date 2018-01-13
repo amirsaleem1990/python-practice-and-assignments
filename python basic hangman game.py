@@ -1,4 +1,3 @@
-# Exercise #30 & 31 & 32
 '''
 def pick_word():
     return random.choice([i.lower() for i in open('/home/hp/Desktop/Exercises from www.practivepython org/exercise_30_related file.txt', 'r').read().split()])
