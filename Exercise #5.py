@@ -13,8 +13,8 @@ Extras:
 point - we’ll get to it soon)
 '''
 import random
-a = [random.choice('0123456789') for i in range(8)]
-b = [random.choice('0123456789') for i in range(6)]
+a = [int(random.choice('0123456789')) for i in range(8)]
+b = [int(random.choice('0123456789')) for i in range(6)]
 def list_overlap(list1, list2):
     print('list1: \n', [i for i in list1])
     print('list2: \n', [i for i in list2])
