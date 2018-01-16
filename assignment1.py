@@ -16,17 +16,10 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-  if count < 10:
-      return 'Number of donuts: ' + str(count)
-  else:
-      return 'Number of donuts: many'
-## umair bhai ny class me bataya...
-##  if count < 10:
-##    endofsent = str(count)
-##  else:
-##    endofsent = 'many'
-##  return "Number of donuts: " + endofsent
-  
+  if count >9: return 'Number of donuts: many'
+  else: return 'Number of donuts: ' + str(count)
+      
+    
 
 
 # B. both_ends
@@ -35,11 +28,9 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-  if len(s) >= 2:
-      return s[ :2]+ s[-2: ]
-  else:
-      return ''
-
+  if len(s) < 2: return ''
+  else: return s[ :2]+ s[-2: ]
+  
 # C. fix_start
 # Given a string s, return a string
 # where all occurences of its first char have
@@ -52,11 +43,6 @@ def both_ends(s):
 def fix_start(s):
     a = s.replace(s[0], '*')
     return s[0] + a[1: ]
-##  print ('fix_start')
-##  test(fix_start('babble'), 'ba**le')
-##  test(fix_start('aardvark'), 'a*rdv*rk')
-##  test(fix_start('google'), 'goo*le')
-##  test(fix_start('donut'), 'donut')
 
 
 # D. MixUp
@@ -66,10 +52,7 @@ def fix_start(s):
 #   'mix', pod' -> 'pox mid'
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
-##def mix_up(a, b):
-##  c = b[ :2] + a[2: ]
-##  d = a[ :2] + b[2: ]
-##  return c + d  
+
 def mix_up(a, b):
   return b[ :2] + a[2: ] + ' ' + a[ :2] + b[2: ]
   
