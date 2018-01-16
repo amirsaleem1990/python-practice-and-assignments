@@ -13,12 +13,7 @@
 # and last chars of the string are the same.
 # Note: python does not have a ++ operator, but += works.
 def match_ends(words):
-  b = 0
-  for item in words:
-      if len(item) >= 2:
-        if item[0] == item[-1]:
-          b = b + 1  
-  return b
+    return len([i for i in words if len(i) > 1 and i[0] == i[-1]])
 
 # B. front_x
 # Given a list of strings, return a list with the strings
@@ -28,18 +23,11 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-  a = []
-  b = []
-  words.sort()
-  for i in words:
-      if i[0] == 'x':
-          a.extend([i])
-  for ib in a:
-      if ib in a:
-          words.remove(ib)
-  return a + words
-print(front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark']))
-
+    words.sort()
+    d = [i for i in words if i[0] == 'x']
+    d.sort()
+    return d + [m for m in words if m[0] != 'x']
+  
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in increasing
 # order by the last element in each tuple.
