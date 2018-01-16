@@ -6,13 +6,10 @@
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
-    if len(s) >= 3:
-        if s[-3: ] != 'ing':
-            return s + 'ing'
-        else:
-            return s + 'ly'
+    if len(s) < 3 : return s
     else:
-        return s
+	if s[-3: ] != 'ing': return s + 'ing'
+        else: return s + 'ly'
 
 
 # E. not_bad
@@ -24,11 +21,9 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-        if s.find('not') < s.find('bad'):
-            return s[:s.find('not')] + 'good' + s[s.find('bad') + 3 :]
-        else:
-            return s
-        
+        if s.find('not') < s.find('bad'): return s[:s.find('not')] + 'good' + s[s.find('bad') + 3 :]
+        else: return s
+
 
 
 # F. front_back
@@ -40,12 +35,10 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
     import math
-##  c = round((len(a)+.5) / 2) 
-##  d = round((len(b)+.5) / 2) 
-##  e = len(a)//2 
-##  f = len(b)//2 
-##  return a[ :c] +b [ :d] + a[-e: ] +b [-f: ]
-    return a[:math.ceil(len(a)/2)] + b[:math.ceil(len(b)/2)] + a[math.ceil(len(a)/2):] + b[math.ceil(len(b)/2):]
+    a1 = math.ceil(len(a)/2)
+    b1 = math.ceil(len(b)/2)
+    return a[:a1] + b[:b1] + a[a1:] + b[b1:]
+
 
 
 # Simple provided test() function used in main() to print
