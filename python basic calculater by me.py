@@ -12,5 +12,4 @@ while e:
         else: print('your choice not it our list.. plz choose correctly')
         f = input('\nAre you want another calculation?\n[y = Yes, anykey = No] ')
         if f.lower() != 'y': e = False; print('Thank\'s for using our calculator. Take care.. bye bye')
-
-        else: e = False; print('Thank\'s for using our calculator. Take care.. bye bye')
+            
