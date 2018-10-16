@@ -23,11 +23,12 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-    words.sort()
-    d = [i for i in words if i[0] == 'x']
-    d.sort()
-    return d + [m for m in words if m[0] != 'x']
-  
+#     words.sort()
+#     d = [i for i in words if i[0] == 'x']
+#     d.sort()
+#     return d + [m for m in words if m[0] != 'x']
+    return sorted([i for i in sorted(words) if i[0] == 'x']) + sorted([m for m in words if m[0] != 'x'])
+
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in increasing
 # order by the last element in each tuple.
