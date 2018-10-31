@@ -959,12 +959,10 @@ assumed to be a console input.
 '''
 def fibonacci(number):
     b = [0, 1]
-    for i in range(number-1):
-        b.append(sum(b[-2:]))
+    for i in range(number-1): b.append(sum(b[-2:]))
     return b[-1]
 # for testing:
-for i in range(7,20):
-    print(fibonacci(i))
+for i in range(7,20): print(fibonacci(i))
 ###########################################################
 '''
 Question:
@@ -1205,7 +1203,7 @@ for i in a:
 '''
 Please write a program to print the list after removing delete even
 numbers in [5,6,77,45,22,12,24].
-'''
+'''	
 a = [5,6,77,45,22,12,24]
 for i in a:
     if i % 2 == 0:
